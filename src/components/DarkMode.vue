@@ -4,7 +4,14 @@
 
 
 <script setup>
-  import { provide } from 'vue';
+  import { provide, ref, readonly } from 'vue';
 
-  provide('darkMode', true)
+  const darkMode = ref(true)
+
+  provide('darkMode', {
+    darkMode: readonly(darkMode),
+    toggleDarkMode: () => {
+      darkMode.value = !darkMode.value
+    }
+  })
 </script>

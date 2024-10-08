@@ -3,7 +3,7 @@
 
   import Button from './components/Button.vue';
   import Sidebar from './components/Sidebar.vue';
-import DarkMode from './components/DarkMode.vue';
+  import DarkMode from './components/DarkMode.vue';
 
   provide('darkMode', false)
 

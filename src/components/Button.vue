@@ -4,10 +4,10 @@
 
 
 <script setup>
-  import { computed, inject } from 'vue'
+  import { computed, inject, unref } from 'vue'
 
-  const darkMode = inject('darkMode')
-  console.log(darkMode);
+  const { darkMode } = inject('darkMode')
+  console.log('test', darkMode);
   
 
   const props = defineProps({
@@ -16,7 +16,7 @@
 
   const classes = computed(() => ({
     btn: true,
-    dark: props.dark || darkMode,
+    dark: props.dark || unref(darkMode),
   }))
 
 </script>

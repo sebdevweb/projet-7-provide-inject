@@ -3,14 +3,18 @@
     <h2>Sidebar</h2>
     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
     <p>
-      <Button>Bonjour</Button>
+      <Button @click="toggleDarkMode">Bonjour</Button>
     </p>
   </aside>
 </template>
 
 
 <script setup>
-  import Button from './Button.vue'
+  import { inject } from 'vue';
+import Button from './Button.vue'
+
+  const { toggleDarkMode } = inject('darkMode')
+
 </script>
 
 
